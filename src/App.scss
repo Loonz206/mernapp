@@ -1,3 +1,4 @@
+//Globals Imports
 @import 'scss/normalize.scss';
 @import 'scss/variables.scss';
 @import 'scss/mixins.scss';
@@ -8,23 +9,7 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
+//Component Imports
+//Use the containing element className as a wrapper with nesting
+//Mobile first, then use the mixins.scss responsive
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: $primaryColor;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
