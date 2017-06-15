@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata|Lato|Merriweather');
+$serif:'Merriweather', Georgia, Times, 'Times New Roman', serif;
+$sansSerif: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$monospace: 'Inconsolata', monoco, Consolas, 'Lucida Console', monospace;
+
+html {
+  text-shadow: 0 0 1px rgba(0,0,0,0);
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+  box-sizing: border-box;
+}
+
+body {
+  font-weight: $serif;
+  font-size: 100%;
+  line-height: 1.5;
+  color:$primaryText;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: $sansSerif;
+}
