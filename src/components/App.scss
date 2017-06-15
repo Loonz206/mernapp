@@ -1,9 +1,9 @@
 //Globals Imports
-@import 'scss/normalize.scss';
-@import 'scss/variables.scss';
-@import 'scss/mixins.scss';
-@import 'scss/typography.scss';
-@import 'scss/forms.scss';
+@import '../scss/normalize';
+@import '../scss/variables';
+@import '../scss/mixins';
+@import '../scss/typography';
+@import '../scss/forms';
 
 .App {
   text-align: center;
