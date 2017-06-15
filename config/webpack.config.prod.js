@@ -134,6 +134,8 @@ module.exports = {
           /\.html$/,
           /\.(js|jsx)$/,
           /\.css$/,
+          /\.scss$/,
+          /\.sass$/,
           /\.json$/,
           /\.bmp$/,
           /\.gif$/,
@@ -216,6 +218,27 @@ module.exports = {
       },
       // ** STOP ** Are you adding a new loader?
       // Remember to add the new extension(s) to the "file" loader exclusion list.
+      {
+          test: /\.scss$/,
+          use:['css-hot-loader'].concat(ExtractTextPlugin.extract({
+                  use: [
+                      {
+                          loader:"css-loader",
+                          options: {
+                              sourceMaps: true
+                          }
+                      },
+                      {
+                          loader:"sass-loader",
+                          options: {
+                              sourceMaps: true
+                          }
+                      }
+                  ],
+                  fallback:"style-loader"
+              }
+          ))
+      }
     ],
   },
   plugins: [
@@ -306,6 +329,8 @@ module.exports = {
     // https://github.com/jmblog/how-to-optimize-momentjs-with-webpack
     // You can remove this if you don't use Moment.js:
     new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
+
+    new ExtractTextPlugin({filename: 'styles.css', allChunks: true})
   ],
   // Some libraries import Node modules but don't use them in the browser.
   // Tell Webpack to provide empty mocks for them so importing them works.
