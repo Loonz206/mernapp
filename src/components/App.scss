@@ -131,11 +131,10 @@ aside {
   height:auto;
 }
 
-.center {
-  text-align: center;
-}
 
 //Component Imports
 //Use the containing element className as a wrapper with nesting
 //Mobile first, then use the mixins.scss responsive
+
+@import '../components/Footer/Footer';
 

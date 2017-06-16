@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Footer from './Footer/Footer';
 import './App.scss';
 
 class App extends Component {
@@ -59,9 +60,7 @@ class App extends Component {
                             </ul>
                         </aside>
                     </main>
-                    <footer>
-                        <p className="center">Copyright 1980-{this.props.date.getFullYear()} ©</p>
-                    </footer>
+                    <Footer date={new Date()}/>
                 </div>
             </div>
         );
