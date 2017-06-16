@@ -1,4 +1,6 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
+import Nav from './Nav/Nav';
+import Main from './Main/Main';
 import Footer from './Footer/Footer';
 import './App.scss';
 
@@ -28,38 +30,9 @@ class App extends Component {
                         <a href="#menu" className={this.state.condition ? 'menu-link active' : 'menu-link'} onClick={this.handleClick}>
                             Menu &#9776;
                         </a>
-                        <nav id="menu">
-                            <ul>
-                                <li><a href="">About</a></li>
-                                <li><a href="">Portfolio</a></li>
-                                <li><a href="">Services</a></li>
-                                <li><a href="">Contact</a></li>
-                            </ul>
-                        </nav>
+                        <Nav/>
                     </header>
-                    <main id="content" className="main">
-                        <section>
-                            <h1>Headline One</h1>
-                            <div className="story">
-                                <h2>Headline Two</h2>
-                                <picture>
-                                    <source srcSet="https://placehold.it/400x300" media="(max-width:600px)"/>
-                                    <img src="https://placehold.it/705x405" className="img-responsive"
-                                         alt="placeholder"/>
-                                </picture>
-                                <p>
-                                    <cite>Some Author - </cite>
-                                    Some other words and works
-                                </p>
-                            </div>
-                        </section>
-                        <aside>
-                            <h3>Headline Three</h3>
-                            <ul>
-                                <li>Some Thing</li>
-                            </ul>
-                        </aside>
-                    </main>
+                    <Main/>
                     <Footer date={new Date()}/>
                 </div>
             </div>

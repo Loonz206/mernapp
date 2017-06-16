@@ -34,107 +34,12 @@ a.menu-link {
   }
 }
 
-nav {
-  background: $primaryColor;
-  clear: both;
-  overflow: hidden;
-  ul {
-    margin: 0;
-    padding: 0;
-    border-top: 1px solid $primaryColor;
-    li a {
-      display: block;
-      padding: 0.8em;
-      color: $white;
-      border-bottom: 1px solid $white;
-      text-decoration:none;
-      transition:.5s;
-      &:hover,
-      &:focus {
-        background-color:rgba(255,255,255,.5);
-      }
-      &:active {
-        background-color:$accentColor;
-      }
-    }
-  }
-}
-
-.js nav {
-  width: 16em;
-  height: 100%;
-  min-height: 82em; //make it seem like a actual page height
-  position: absolute;
-  top: 0;
-  right: -16em; //right based
-}
-
-@include responsive(phablet){
-  a.menu-link {
-    display: none;
-  }
-  .js nav {
-    min-height: 100%; //get rid of that long height
-    max-width: none;
-    position: static;
-    width: auto;
-  }
-  .wrap.active {
-    right: 0; //right based fly out
-  }
-  nav {
-    ul {
-      margin: 0;
-      border: 0;
-      float:right; //The navigation flows on the right
-      li {
-        display: inline-block;
-        margin: 0 0.25em;
-        a {
-          border:0;
-        }
-      }
-    }
-  }
-}
-//------>>
-
-main {
-  display: flex;
-  flex-wrap: wrap;
-  width:94%;
-  margin: auto;
-  @include responsive(tablet){
-    width: 94%;
-  }
-}
-
-section {
-  display:block;
-  width:100%;
-  @include responsive(tablet){
-    flex:2;
-  }
-}
-
-aside {
-  display:block;
-  width:100%;
-  @include responsive(tablet){
-    flex:1;
-  }
-}
-
-.img-responsive {
-  display: block;
-  width:100%;
-  height:auto;
-}
-
 
 //Component Imports
 //Use the containing element className as a wrapper with nesting
 //Mobile first, then use the mixins.scss responsive
 
+@import '../components/Nav/Nav';
+@import '../components/Main/Main';
 @import '../components/Footer/Footer';
 

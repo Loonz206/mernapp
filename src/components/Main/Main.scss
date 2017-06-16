@@ -1,0 +1,25 @@
+main {
+  display: flex;
+  flex-wrap: wrap;
+  width:94%;
+  margin: auto;
+  @include responsive(tablet){
+    width: 94%;
+  }
+}
+
+section {
+  display:block;
+  width:100%;
+  @include responsive(tablet){
+    flex:2;
+  }
+}
+
+aside {
+  display:block;
+  width:100%;
+  @include responsive(tablet){
+    flex:1;
+  }
+}
