@@ -1,3 +1,4 @@
+//--- Navigation --->>
 nav {
   background: $primaryColor;
   clear: both;
@@ -34,17 +35,11 @@ nav {
 }
 
 @include responsive(phablet){
-  a.menu-link {
-    display: none;
-  }
   .js nav {
     min-height: 100%; //get rid of that long height
     max-width: none;
     position: static;
     width: auto;
-  }
-  .wrap.active {
-    right: 0; //right based fly out
   }
   nav {
     .pull-left {
@@ -64,4 +59,4 @@ nav {
     }
   }
 }
-//------>>
+//--- /Navigation --->>

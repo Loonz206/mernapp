@@ -5,7 +5,6 @@
 @import '../scss/typography';
 @import '../scss/forms';
 
-//Navigation Styles-->>
 a.menu-link {
   float: right; //right based
   display: block;
@@ -31,6 +30,15 @@ a.menu-link {
   transition: all 0.3s ease-out;
   &.active {
     right: 16em; //right based
+  }
+}
+
+@include responsive(phablet){
+  a.menu-link {
+    display: none;
+  }
+  .wrap.active {
+    right: 0; //right based fly out
   }
 }
 
