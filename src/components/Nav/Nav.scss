@@ -23,6 +23,9 @@ nav {
       }
     }
   }
+  .right-nav {
+    line-height:40px;
+  }
 }
 
 .js nav {
@@ -42,7 +45,7 @@ nav {
     width: auto;
   }
   nav {
-    .pull-left {
+    .left-nav {
       float: left;
     }
     ul {
