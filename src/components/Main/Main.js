@@ -9,8 +9,9 @@ class Main extends Component {
                     <div className="story">
                         <h2>Headline Two</h2>
                         <picture>
-                            <source srcSet="https://placehold.it/400x300" media="(max-width:600px)"/>
-                            <img src="https://placehold.it/705x405" className="img-responsive"
+                            <source srcSet="https://placehold.it/400x225/2ecc71/ffffff" media="(max-width:400px)"/>
+                            <source srcSet="https://placehold.it/600x338/f1c40f/ffffff" media="(max-width:600px)"/>
+                            <img src="https://placehold.it/705x405/e74c3c/ffffff" className="img-responsive"
                                  alt="placeholder"/>
                         </picture>
                         <p>
