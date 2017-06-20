@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 
-class Main extends Component {
-    render (){
+class About extends Component {
+    render(){
         return (
             <main id="content" className="main">
                 <section>
-                    <h1>Home</h1>
+                    <h1>About</h1>
                     <div className="story">
                         <h2>Headline Two</h2>
                         <picture>
@@ -31,4 +31,4 @@ class Main extends Component {
     }
 }
 
-export default Main;
+export default About;
