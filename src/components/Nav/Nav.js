@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 class Nav extends Component {
     render(){
         return (
             <nav id="menu">
                 <ul className="left-nav">
-                    <li><Link to="/">React Playground</Link></li>
+                    <li><NavLink exact activeClassName="active" to="/">React Playground</NavLink></li>
                 </ul>
                 <ul className="right-nav">
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/about">About</Link></li>
+                    <li><NavLink exact activeClassName="active" to="/about">About</NavLink></li>
+                    <li><NavLink exact activeClassName="active" to="/todo">Todo</NavLink></li>
                 </ul>
             </nav>
         )

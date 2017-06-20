@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Nav from './Nav/Nav';
 import Main from './Main/Main';
 import About from './About/About';
+import Todo from './Todo/Todo';
+import NotFound from './NotFound/Notfound';
 import Footer from './Footer/Footer';
 import './App.scss';
 
@@ -27,6 +29,7 @@ class App extends Component {
     render() {
         return (
             <Router>
+                {/* Router doesn't count as a single containing element so the app-container is now */}
                 <div className="app-container">
                     <div className={this.state.condition ? 'wrap active' : 'wrap'} id="wrap">
                         <header>
@@ -35,9 +38,13 @@ class App extends Component {
                             </a>
                             <Nav/>
                         </header>
-                        {/*All Views for the guts go in here*/}
-                        <Route exact path="/" component={Main}/>
-                        <Route path="/about" component={About}/>
+                        {/* All Views for the guts go in here, using state class components */}
+                        <Switch>
+                            <Route exact path="/" component={Main}/>
+                            <Route path="/about" component={About}/>
+                            <Route path="/todo" component={Todo}/>
+                            <Route component={NotFound}/>
+                        </Switch>
                         <Footer date={new Date()}/>
                     </div>
                 </div>
