@@ -23,9 +23,6 @@ nav {
       }
     }
   }
-  .right-nav {
-    line-height:40px;
-  }
 }
 
 .js nav {
@@ -37,7 +34,7 @@ nav {
   right: -16em; //right based
 }
 
-@include responsive(phablet){
+@include responsive(navBreak){
   .js nav {
     min-height: 100%; //get rid of that long height
     max-width: none;
@@ -61,5 +58,9 @@ nav {
       }
     }
   }
+}
+
+.active {
+  color:$darkPrimaryColor;
 }
 //--- /Navigation --->>

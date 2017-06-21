@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 
-class Main extends Component {
-    render (){
+class Todo extends Component {
+    render(){
         return (
             <main id="content" className="main">
                 <section>
-                    <h1>Home</h1>
+                    <h1>Todo</h1>
                     <div className="story">
                         <h2>Headline Two</h2>
                         <picture>
-                            <source srcSet="https://placehold.it/400x225/2ecc71/ffffff" media="(max-width:400px)"/>
-                            <source srcSet="https://placehold.it/600x338/f1c40f/ffffff" media="(max-width:600px)"/>
-                            <img src="https://placehold.it/705x405/e74c3c/ffffff" className="img-responsive"
+                            <source srcSet="http://lorempixel.com/400/225/animals" media="(max-width:400px)"/>
+                            <source srcSet="http://lorempixel.com/600/338/city" media="(max-width:600px)"/>
+                            <img src="http://lorempixel.com/705/405/sports" className="img-responsive"
                                  alt="placeholder"/>
                         </picture>
                         <p>
@@ -31,4 +31,4 @@ class Main extends Component {
     }
 }
 
-export default Main;
+export default Todo;

@@ -1,19 +1,16 @@
 import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
 
 class Nav extends Component {
     render(){
         return (
             <nav id="menu">
                 <ul className="left-nav">
-                    <li><a href="">
-                        <img src="https://placehold.it/230x32" alt=""/>
-                    </a></li>
+                    <li><NavLink exact activeClassName="active" to="/">React Playground</NavLink></li>
                 </ul>
                 <ul className="right-nav">
-                    <li><a href="">To-do Application</a></li>
-                    <li><a href="">Login</a></li>
-                    <li><a href="">Examples</a></li>
-                    <li><a href="">Login</a></li>
+                    <li><NavLink exact activeClassName="active" to="/about">About</NavLink></li>
+                    <li><NavLink exact activeClassName="active" to="/todo">Todo</NavLink></li>
                 </ul>
             </nav>
         )
