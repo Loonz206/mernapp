@@ -5,7 +5,7 @@ const NotFound =()=>(
             <h1>Page Not Found</h1>
             <p>Sorry, but the page you were trying to view does not exist.</p>
             <picture>
-                <img src="" alt="Cat Scratching Arms"/>
+                <img src="https://media.giphy.com/media/joV1k1sNOT5xC/giphy.gif" alt="Cat Scratching Arms"/>
             </picture>
     </div>
 );
