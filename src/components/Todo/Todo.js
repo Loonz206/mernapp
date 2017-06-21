@@ -1,33 +1,61 @@
 import React, { Component } from 'react';
 
 class Todo extends Component {
-    render(){
+    constructor(props) {
+        super(props);
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.state = {
+            items: [],
+            text: '',
+            placeholder: 'Add a todo..'
+        };
+    }
+
+    render() {
         return (
             <main id="content" className="main">
-                <section>
-                    <h1>Todo</h1>
-                    <div className="story">
-                        <h2>Headline Two</h2>
-                        <picture>
-                            <source srcSet="http://lorempixel.com/400/225/animals" media="(max-width:400px)"/>
-                            <source srcSet="http://lorempixel.com/600/338/city" media="(max-width:600px)"/>
-                            <img src="http://lorempixel.com/705/405/sports" className="img-responsive"
-                                 alt="placeholder"/>
-                        </picture>
-                        <p>
-                            <cite>Some Author - </cite>
-                            Some other words and works
-                        </p>
-                    </div>
+                <section className="todo-section">
+                    <h3>TODO</h3>
+                    <form onSubmit={this.handleSubmit}>
+                        <input onChange={this.handleChange} value={this.state.text} placeholder={this.state.placeholder} />
+                        <button>{'Add #' + (this.state.items.length + 1)}</button>
+                    </form>
+                    <hr/>
+                    <TodoList items={this.state.items} />
                 </section>
-                <aside>
-                    <h3>Headline Three</h3>
-                    <ul>
-                        <li>Some Thing</li>
-                    </ul>
-                </aside>
             </main>
-        )
+        );
+    }
+
+    handleChange(e) {
+        this.setState({
+            text: e.target.value
+        });
+    }
+
+    handleSubmit(e) {
+        e.preventDefault();
+        var newItem = {
+            text: this.state.text,
+            id: Date.now()
+        };
+        this.setState((prevState) => ({
+            items: prevState.items.concat(newItem),
+            text: ''
+        }));
+    }
+}
+
+class TodoList extends Component {
+    render() {
+        return (
+            <ul>
+                {this.props.items.map(item => (
+                    <li key={item.id}>{item.text}</li>
+                ))}
+            </ul>
+        );
     }
 }
 

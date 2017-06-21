@@ -9,6 +9,7 @@ class Nav extends Component {
                     <li><NavLink exact activeClassName="active" to="/">React Playground</NavLink></li>
                 </ul>
                 <ul className="right-nav">
+                    {/* All Nav links to Views go here */}
                     <li><NavLink exact activeClassName="active" to="/about">About</NavLink></li>
                     <li><NavLink exact activeClassName="active" to="/todo">Todo</NavLink></li>
                 </ul>
