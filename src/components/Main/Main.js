@@ -25,6 +25,8 @@ class Main extends Component {
                     <h3>Headline Three</h3>
                     <ul>
                         <li>Some Thing</li>
+                        <li>Another Thing</li>
+                        <li>Yet another Thing</li>
                     </ul>
                 </aside>
             </main>

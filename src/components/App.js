@@ -4,6 +4,7 @@ import Nav from './Nav/Nav';
 import Main from './Main/Main';
 import About from './About/About';
 import Todo from './Todo/Todo';
+import Playground from './Playground/Playground';
 import NotFound from './NotFound/Notfound';
 import Footer from './Footer/Footer';
 import './App.scss';
@@ -43,6 +44,7 @@ class App extends Component {
                             <Route exact path="/" component={Main}/>
                             <Route path="/about" component={About}/>
                             <Route path="/todo" component={Todo}/>
+                            <Route path="/playground" component={Playground}/>
                             <Route component={NotFound}/>
                         </Switch>
                         <Footer date={new Date()}/>

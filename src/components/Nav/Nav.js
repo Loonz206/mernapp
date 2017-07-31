@@ -12,6 +12,7 @@ class Nav extends Component {
                     {/* All Nav links to Views go here */}
                     <li><NavLink exact activeClassName="active" to="/about">About</NavLink></li>
                     <li><NavLink exact activeClassName="active" to="/todo">Todo</NavLink></li>
+                    <li><NavLink exact activeClassName="active" to="/playground">Playground</NavLink></li>
                 </ul>
             </nav>
         )
